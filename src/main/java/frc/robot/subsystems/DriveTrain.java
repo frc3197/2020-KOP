@@ -5,6 +5,11 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
+/** 
+* 
+* @author 3197-Hexhounds 
+*/
+
 package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonFX;
@@ -23,6 +28,7 @@ public class DriveTrain extends SubsystemBase {
   SpeedControllerGroup rightMotor = new SpeedControllerGroup(rightMotor1, rightMotor2);
 
   DifferentialDrive drive = new DifferentialDrive(leftMotor, rightMotor);
+
   /**
    * Creates a new DriveTrain.
    */
@@ -38,9 +44,12 @@ public class DriveTrain extends SubsystemBase {
     // This method will be called once per scheduler run
   }
 
-  public void tankDrive(double l, double r)
-  {
-    drive.tankDrive(l,r);
+  /**
+   * @param l
+   * @param r
+   */
+  public void tankDrive(double l, double r) {
+    drive.tankDrive(l, r);
 
   }
 }
