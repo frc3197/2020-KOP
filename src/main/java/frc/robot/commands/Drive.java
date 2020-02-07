@@ -13,9 +13,10 @@ import frc.robot.subsystems.DriveTrain;
 
 public class Drive extends CommandBase {
   DriveTrain drivetrain;
+
   public Drive(DriveTrain drivetrain) {
-  this.drivetrain = drivetrain;
-  addRequirements(drivetrain);
+    this.drivetrain = drivetrain;
+    addRequirements(drivetrain);
     // Use addRequirements() here to declare subsystem dependencies.
   }
 
@@ -29,8 +30,8 @@ public class Drive extends CommandBase {
   public void execute() {
     double l = RobotContainer.getLeft();
     double r = RobotContainer.getRight();
-    
-    drivetrain.tankDrive(l, r);
+
+    drivetrain.tankDrive(-l, -r);
   }
 
   // Called once the command ends or is interrupted.
