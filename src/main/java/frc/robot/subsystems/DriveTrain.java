@@ -37,6 +37,10 @@ public class DriveTrain extends SubsystemBase {
     leftMotor2.setSafetyEnabled(false);
     rightMotor1.setSafetyEnabled(false);
     rightMotor2.setSafetyEnabled(false);
+    leftMotor1.configOpenloopRamp(.1);
+    leftMotor2.configOpenloopRamp(.1);
+    rightMotor1.configOpenloopRamp(.1);
+    rightMotor2.configOpenloopRamp(.1);
   }
 
   @Override

@@ -28,7 +28,7 @@ public class Drive extends CommandBase {
     double l = RobotContainer.getLeft();
     double r = RobotContainer.getRight();
 
-    drivetrain.tankDrive(-l, -r);
+    drivetrain.tankDrive(-l * .8, -r * .8);
   }
 
   /**
